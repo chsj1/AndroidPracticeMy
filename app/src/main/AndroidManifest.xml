@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.hjd.com.androidpracticemy">
+
+    <!--<permission android:name="test.hjd.com.broadcastreceiver.xixixixi" />-->
+    <!--<uses-permission android:name="test.hjd.com.broadcastreceiver.xixixixi" />-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--入口activity的配置-->
+        <activity
+            android:name=".MyActivity"
+            android:label="我是第一个activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--一般activity的配置-->
+        <activity
+            android:name=".SecondActivity"
+            android:label="我是第二个activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ThridActivity" />
+
+        <activity android:name=".FourthActivity" />
+
+        <activity android:name=".FifthActivity" />
+
+
+        <!--隐式启动的activity的配置-->
+        <activity
+            android:name=".SixthActivity"
+            android:label="这是第六个activity">
+            <intent-filter>
+                <!--指定用于启动的actionname-->
+                <!--<action android:name="sixactivity" />-->
+                <action android:name="sameaction" />
+                <!--隐式启动的activity的category必须写这一个,否则不起作用-->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SeventhActivity"
+            android:label="这是第7个activity">
+            <intent-filter>
+                <!--<action android:name="sevenactivity" />-->
+                <action android:name="sameaction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".EighthActivity">
+            <intent-filter>
+                <action android:name="eightactivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="hjd" />
+                <data android:mimeType="aa/bb" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".TranslucentActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <receiver android:name=".MyBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="hahahha" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+</manifest>

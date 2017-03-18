@@ -1,0 +1,1 @@
+include ':app', ':broadcastreceiver', ':contentprovider', ':contentprovider2', ':contentresolver2', ':myservice', ':service2', ':storage', ':storage2', ':http', ':selfwidget'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidPracticeMy.iml" filepath="$PROJECT_DIR$/AndroidPracticeMy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" filepath="$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contentprovider/contentprovider.iml" filepath="$PROJECT_DIR$/contentprovider/contentprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contentprovider2/contentprovider2.iml" filepath="$PROJECT_DIR$/contentprovider2/contentprovider2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contentresolver2/contentresolver2.iml" filepath="$PROJECT_DIR$/contentresolver2/contentresolver2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selfwidget/selfwidget.iml" filepath="$PROJECT_DIR$/selfwidget/selfwidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service2/service2.iml" filepath="$PROJECT_DIR$/service2/service2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage/storage.iml" filepath="$PROJECT_DIR$/storage/storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage2/storage2.iml" filepath="$PROJECT_DIR$/storage2/storage2.iml" />
+    </modules>
+  </component>
+</project>

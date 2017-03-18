@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.hjd.com.broadcastreceiver">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <!--监听开机广播需要权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--声明自定义权限-->
+    <!--<permission android:name="test.hjd.com.broadcastreceiver.xixixixi" />-->
+    <!--&lt;!&ndash;使用自定义权限&ndash;&gt;-->
+    <!--<uses-permission android:name="test.hjd.com.broadcastreceiver.xixixixi" />-->
+
+    <!--监听外拨电话需要加的权限-->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--广播接受者的注册,通过name属性指定你要注册的广播接受者
+        广播接受者的静态注册.
+        所谓的静态注册指的是通过xml文件的配置来完成相应的注册
+        -->
+        <receiver android:name=".AirPlaneModeBroadcastReceiver">
+            <intent-filter>
+                <!--在注册广播接受者的时候通过action指定她要监听的广播
+                这里监听的是飞行模式
+                -->
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".MyBroadcastReceiver">
+            <intent-filter android:priority="-1000">
+                <!--指定要监听自定义的广播的action-->
+                <action android:name="hahahha" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".MyBroadcastReceiver3">
+            <intent-filter android:priority="500">
+                <!--指定要监听自定义的广播的action-->
+                <action android:name="hahahha" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".MyBroadcastReceiver4">
+            <intent-filter android:priority="1000">
+                <!--指定要监听自定义的广播的action-->
+                <action android:name="hahahha" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--<receiver android:name=".ScreenBroadcastReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SCREEN_ON" />-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".PackageReceiver" >
+            <intent-filter>
+                <!--应用被卸载的动作-->
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <!--应用被安装的动作-->
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <!--监听package 广播所必须要配置的信息-->
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".NewOutGoingCallReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+</manifest>
